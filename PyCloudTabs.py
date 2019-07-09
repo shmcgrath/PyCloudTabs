@@ -38,7 +38,7 @@ def gather_cloud_tabs(conn, cloudTabsBookmarks):
     for row in c.execute(cloudTabsSql):
         title = row[0]
         url = row[1]
-        bookmark = '\n      <DT><A HREF="' + str(url) + '">' + str(title) + '</A>'
+        bookmark = '\n      <DT><A HREF="' + str(url) + '" TAGS="">' + str(title) + '</A>'
         cloudTabsBookmarks.write(bookmark)
 
 def create_connection(db_file):
